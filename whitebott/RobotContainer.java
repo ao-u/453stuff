@@ -16,12 +16,15 @@ import frc.robot.subsystems.TankDriveSubsystem;
 public class RobotContainer {
   private final TankDriveSubsystem m_tankDriveSubsystem = new TankDriveSubsystem();
   private final TankDriveCmd m_tankDriveCmd = new TankDriveCmd(m_tankDriveSubsystem);
+  private final ArmSubsystem m_armSubsystem = new ArmSubsystem();
+  private final ManualControlArmCmd m_mControlArmCmd = new ManualControlArmCmd(m_armSubsystem);
   public RobotContainer() {
     configureBindings();
   }
 
   private void configureBindings() {
     m_tankDriveSubsystem.setDefaultCommand(m_tankDriveCmd);
+    m_armSubsystem.setDefaultCommand(m_mControlArmCmd);
   }
 
   public Command getAutonomousCommand() {

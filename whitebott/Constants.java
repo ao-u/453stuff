@@ -122,7 +122,11 @@ public class Constants {
         public static final int middlePosButton = 10;
         public static final int topPosButton = 12;
         public static double kArmSpeedMultiplier = -250;
-
+        
+        //These should be set to actual values eventually not 3 and 1
+        public static double kExtended = 3;
+        public static double kRetracted = 1;
+        
         // PID gains may have to be adjusted based on the responsiveness of control loop. PID is used to correct sensor input.
         /* It is composed of three terms: proportional, integral, and derivative.
         * The proportional term is the error multiplied by a constant.
